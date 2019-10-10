@@ -51,6 +51,8 @@ function createMenuComponent() {
   menuContainer.classList.add("menu");
 
   const menuButton = document.querySelector(".menu-button");
+  menuButton.addEventListener("click", () => menuContainer.classList.toggle("menu--open"));
+  
   const menuH1 = document.querySelector(".header h1");
   parentContainer = menuH1.parentNode;
   parentContainer.insertBefore(menuContainer, menuH1);
